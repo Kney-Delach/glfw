@@ -1,4 +1,4 @@
-    project "GLFW"
+project "GLFW"
     kind "StaticLib"
     language "C"
     
@@ -20,7 +20,7 @@
     
 	filter "system:windows"
         buildoptions { "-std=c11", "-lgdi32" }
-        systemversion "10.0.17134.0"
+        systemversion "latest"
         staticruntime "On"
         
         files
@@ -41,5 +41,6 @@
             "_GLFW_WIN32",
             "_CRT_SECURE_NO_WARNINGS"
 		}
+    
     filter { "system:windows", "configurations:Release" }
         buildoptions "/MT"
